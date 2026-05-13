@@ -1,0 +1,80 @@
+@page "/dashboard"
+
+@using  RachaAi.Models
+
+<h1 class="mb-4">Dashboard</h1>
+
+<div class="row mb-4">
+
+    <div class="col-md-4 mb-3">
+        <div class="card bg-success text-white shadow p-3">
+            <h5>Total a Receber</h5>
+            <h2>R$ 800,00</h2>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <div class="card bg-danger text-white shadow p-3">
+            <h5>Total a Pagar</h5>
+            <h2>R$ 300,00</h2>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <div class="card bg-dark text-white shadow p-3">
+            <h5>Saldo Geral</h5>
+            <h2>R$ 500,00</h2>
+        </div>
+    </div>
+
+</div>
+
+<h3>Seus Grupos</h3>
+
+@if (grupos.Count == 0)
+{
+    <div class="alert alert-info">
+        Você ainda não participa de nenhum grupo.
+    </div>
+}
+else
+{
+    @foreach (var grupo in grupos)
+    {
+        <GrupoCard Grupo="grupo" />
+    }
+}
+
+<button class="btn btn-primary shadow rounded-circle"
+        style="
+        position:fixed;
+        bottom:20px;
+        right:20px;
+        width:65px;
+        height:65px;
+        font-size:30px;">
+    +
+</button>
+
+@code {
+
+    List<Grupo> grupos = new()
+    {
+        new Grupo
+        {
+            Nome = "República",
+            Categoria = "Casa",
+            Valor = 250,
+            UsuarioDeve = true
+        },
+
+        new Grupo
+        {
+            Nome = "Churrasco",
+            Categoria = "Lazer",
+            Valor = 100,
+            UsuarioDeve = false
+        }
+    };
+
+}

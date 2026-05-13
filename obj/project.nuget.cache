@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "L+XCvkgOW+A=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jonathan\\Documents\\RachaAi\\RachaAi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jonathan\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.8\\microsoft.aspnetcore.app.internal.assets.10.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
